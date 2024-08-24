@@ -1,5 +1,11 @@
 ## Software Engineering Reference Guide
+A distilled reference guide on all things SWE.
 ### Contents
+- [The Four Pillars of Object-Oriented Programming](#the-four-pillars-of-object-oriented-programming)
+  - [Encapsulation](#encapsulation)
+  - [Inheritance](#inheritance)
+  - [Polymorphism](#polymorphism)
+  - [Abstraction](#abstraction)
 - [Design Patterns](#design-patterns)
   - [Strategy Pattern](#strategy-pattern)
 - [Object-Oriented Design Principles](#object-oriented-design-principles)
@@ -8,7 +14,31 @@
   - [REST API](#rest-api)
 - [Testing](#testing)
   - [REST API Testing](#rest-api-testing)
+#### The Four Pillars of Object-Oriented Programming
+Object-Oriented Programming (OOP) is a programming paradign centered around the concept of "objects," which represent real-world entities, or abstract concepts. The four pillars of OOP are encapsulation, inheritance, polymorphism, and abstraction. The pillars lay the foundation for creating modular, resuable, and maintainable code.
+#### Encapsulation
+Encapsulation is the budling of data (attributes) and methods (functions) that operate on the data into a single unit or class. It restricts direct access to an object's components to prevent unintended consequences resulting from misuse of the methods and data. 
 
+Encapsulation helps to protect an object's internal state and expose a controlled interface for interacting with that object.
+##### Example
+```typescript
+class Account {
+    private balance: number = 0;
+
+    // Method to deposit money
+    deposit(amount: number): void {
+        if (amount > 0) {
+            this.balance += amount;
+        }
+    }
+
+    // Method to retrieve the current balance
+    getBalance(): number {
+        return this.balance;
+    }
+}
+```
+Notice there's no `setter` for the private `balance` attribute. This ensures modifications to `balance` are done so though a controlled interface, in this case `deposit(amount)`.
 #### Design Patterns
 ##### Strategy Pattern
 TBA
