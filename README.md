@@ -121,7 +121,7 @@ class Cat extends Animal {
 const animals: Animal[] = [new Dog(), new Cat()];
 animals.forEach(animal => animal.makeSound());
 ```
-Clients don't need to know how each `Animal` makes a sound, but that they're capable making a sound by calling `makeSound()`. In addition, each `makeSound()` implementation is decoupled from the parent class.
+Clients don't need to know how each `Animal` makes a sound, but simply that they're capable making a sound by calling `makeSound()`. In addition, each `makeSound()` implementation is decoupled from the parent class.
 
 #### Design Patterns
 ##### Strategy Pattern
