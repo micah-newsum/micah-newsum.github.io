@@ -1,5 +1,5 @@
 ## Software Engineering Reference Guide
-A distilled reference guide on all things SWE.
+A distilled reference guide of all things SWE.
 ### Contents
 - [The Four Pillars of Object-Oriented Programming](#the-four-pillars-of-object-oriented-programming)
   - [Encapsulation](#encapsulation)
