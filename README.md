@@ -1,10 +1,10 @@
 ## Welcome to my "All Things Software Engineering Reference Guide"
 ### Contents
 - [Object-Oriented Design Principles](#object-oriented-design-principles)
-  - [Principle of Least Knowledge (Law of Demeter)](#principle-of-least-knowledge-(law-of-demeter))
+  - [Principle of Least Knowledge](#principle-of-least-knowledge)
  
 #### Object-Oriented Design Principles
-##### Principle of Least Knowledge (Law of Demeter)
+##### Principle of Least Knowledge
 The "Principle of Least Knowledge," also known as the Law of Demeter, is a design principle that encourages reducing the dependencies between objects. It essentially states that a method of a class should only call methods on:
 - The object itself.
 - Objects passed in as arguments.
