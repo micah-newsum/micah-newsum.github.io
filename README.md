@@ -68,6 +68,61 @@ class Car extends Vehicle {
 ```
 The `Car` class extends the more generic `Vehicle` class, reusing the common attributes and methods, while defining it's own `lockDoors()` function.
 
+### Polymorphism
+Polymorphism allows objects of different classes to be treated as objects of a common supertype. In addition, it enables a single function to operate on objects of different types. 
+
+Polymorphism simplifies code by providing a shared interface for a generic action. It also makes code more flexible and extensible by adding new implementations without altering existing code.
+
+**Example**
+```typescript
+interface Vehicle {
+    move(): void
+}
+
+class Car implements Vehicle {
+    move(): void {
+        console.log('The car is driving');
+    }
+}
+
+class Bike implements Vehicle {
+    move(): void {
+        console.log('The bike is riding');
+    }
+}
+
+// Polymorphism in action
+const vehicles: Vehicle[] = [new Car(), new Bike()];
+vehicles.forEach(vehicle => vehicle.move());
+```
+The interface `Vehicle` type defines a single function `move()` which any subtype, for example `Car` or `Bike`, implements.
+
+### Abstraction
+Abstraction serves to hide complex implementations and only expose the necessary features or behaviors. It focuses on what an object does rather than how it does is. 
+
+Abstraction helps reduce cognitive load by allowing developers to focus on higher level interactions without needing to understand all the intricate details. It also enhances maintainability by decoupling the interface from the implementation.
+```typescript
+abstract class Animal {
+    abstract makeSound(): void; // Abstract method
+}
+
+class Dog extends Animal {
+    makeSound(): void {
+        console.log('Woof! Woof!');
+    }
+}
+
+class Cat extends Animal {
+    makeSound(): void {
+        console.log('Meow! Meow!');
+    }
+}
+
+const animals: Animal[] = [new Dog(), new Cat()];
+animals.forEach(animal => animal.makeSound());
+```
+Clients don't need to know how each `Animal` makes a sound, but that they're capable making a sound by calling `makeSound()`. In addition, each `makeSound()` implementation is decoupled from the parent class.
+
 #### Design Patterns
 ##### Strategy Pattern
 TBA
