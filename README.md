@@ -14,6 +14,7 @@ A distilled reference guide on all things SWE.
   - [REST API](#rest-api)
 - [Testing](#testing)
   - [REST API Testing](#rest-api-testing)
+
 #### The Four Pillars of Object-Oriented Programming
 Object-Oriented Programming (OOP) is a programming paradign centered around the concept of "objects," which represent real-world entities, or abstract concepts. The four pillars of OOP are encapsulation, inheritance, polymorphism, and abstraction. The pillars lay the foundation for creating modular, resuable, and maintainable code.
 #### Encapsulation
