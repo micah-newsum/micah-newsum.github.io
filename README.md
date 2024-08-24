@@ -1,8 +1,17 @@
 ## Software Engineering Reference Guide
 ### Contents
+- [Design Patterns](#design-patterns)
+  - [Strategy Pattern](#strategy-pattern)
 - [Object-Oriented Design Principles](#object-oriented-design-principles)
   - [Principle of Least Knowledge](#principle-of-least-knowledge)
- 
+- [System Design](#system-design)
+  - [REST API](#rest-api)
+- [Testing](#testing)
+  - [REST API Testing](#rest-api-testing)
+
+#### Design Patterns
+##### Strategy Pattern
+TBA
 #### Object-Oriented Design Principles
 ##### Principle of Least Knowledge
 The "Principle of Least Knowledge," also known as the Law of Demeter, is a design principle that encourages reducing the dependencies between objects. It essentially states that a method of a class should only call methods on:
