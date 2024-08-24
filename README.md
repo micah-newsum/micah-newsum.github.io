@@ -98,9 +98,9 @@ vehicles.forEach(vehicle => vehicle.move());
 The interface `Vehicle` type defines a single function `move()` which any subtype, for example `Car` or `Bike`, implements.
 
 ### Abstraction
-Abstraction serves to hide complex implementations and only expose the necessary features or behaviors. It focuses on what an object does rather than how it does is. 
+Abstraction serves to hide complex implementations and only expose the necessary features or behaviors. It focuses on what an object does rather than how it does it. 
 
-Abstraction helps reduce complexity and the cognitive load required by the developer when interacting with an object. Developers are able to focus on higher level interactions without needing to understand all the intricate details. It also enhances maintainability by decoupling the interface from the implementation.
+Abstraction reduces the cognitive load required by the developer when interacting with an object. Developers are able to focus on higher level interactions without needing to understand all the intricate details. 
 ```typescript
 abstract class Animal {
     abstract makeSound(): void; // Abstract method
