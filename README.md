@@ -100,7 +100,7 @@ The interface `Vehicle` type defines a single function `move()` which any subtyp
 ### Abstraction
 Abstraction serves to hide complex implementations and only expose the necessary features or behaviors. It focuses on what an object does rather than how it does is. 
 
-Abstraction helps reduce cognitive load by allowing developers to focus on higher level interactions without needing to understand all the intricate details. It also enhances maintainability by decoupling the interface from the implementation.
+Abstraction helps reduce complexity and the cognitive load required by the developer when interacting with an object. Developers are able to focus on higher level interactions without needing to understand all the intricate details. It also enhances maintainability by decoupling the interface from the implementation.
 ```typescript
 abstract class Animal {
     abstract makeSound(): void; // Abstract method
