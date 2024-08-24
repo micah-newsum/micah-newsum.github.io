@@ -1,7 +1,7 @@
 ## Welcome to my "All Things Software Engineering Reference Guide"
 ### Contents
 - [Object-Oriented Design Principles](#object-oriented-design-principles)
-  - [Principle of Least Knowledge (Law of Demeter)](#principle-of-least-knowledge-(law-of-demeter)
+  - [Principle of Least Knowledge (Law of Demeter)](#principle-of-least-knowledge-(law-of-demeter))
  
 #### Object-Oriented Design Principles
 ##### Principle of Least Knowledge (Law of Demeter)
