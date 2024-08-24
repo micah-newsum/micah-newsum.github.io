@@ -20,7 +20,8 @@ Object-Oriented Programming (OOP) is a programming paradign centered around the 
 Encapsulation is the budling of data (attributes) and methods (functions) that operate on the data into a single unit or class. It restricts direct access to an object's components to prevent unintended consequences resulting from misuse of the methods and data. 
 
 Encapsulation helps to protect an object's internal state and expose a controlled interface for interacting with that object.
-##### Example
+
+**Example**
 ```typescript
 class Account {
     private balance: number = 0;
@@ -39,6 +40,33 @@ class Account {
 }
 ```
 Notice there's no `setter` for the private `balance` attribute. This ensures modifications to `balance` are done so though a controlled interface, in this case `deposit(amount)`.
+#### Inheritance
+Inheritance allows a class (child or subclass) to inherit attributes and methods from an existing class (parent or superclass). The child class can add its own attributes and methods or override the inherited ones.
+
+Inheritance promotes code reuse and establishes a hierarchy between classes.
+
+**Example**
+```typescript
+class Vehicle {
+    constructor(public make: string, public model: string) {}
+
+    startEngine(): void {
+        console.log('Engine started');
+    }
+}
+
+class Car extends Vehicle {
+    constructor(make: string, model: string, public doors: number) {
+        super(make, model); // Call the parent class constructor
+    }
+
+    lockDoors(): void {
+        console.log('Doors locked');
+    }
+}
+```
+The `Car` class extends the more generic `Vehicle` class, reusing the common attributes and methods, while defining it's own `lockDoors()` function.
+
 #### Design Patterns
 ##### Strategy Pattern
 TBA
