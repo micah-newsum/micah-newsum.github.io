@@ -1,4 +1,4 @@
-## Welcome to my "All Things Software Engineering Reference Guide"
+## Software Engineering Reference Guide
 ### Contents
 - [Object-Oriented Design Principles](#object-oriented-design-principles)
   - [Principle of Least Knowledge](#principle-of-least-knowledge)
