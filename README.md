@@ -18,7 +18,7 @@ A distilled reference guide of all things SWE.
 #### The Four Pillars of Object-Oriented Programming
 Object-Oriented Programming (OOP) is a programming paradign centered around the concept of "objects," which represent real-world entities, or abstract concepts. The four pillars of OOP are encapsulation, inheritance, polymorphism, and abstraction. The pillars lay the foundation for creating modular, resuable, and maintainable code.
 #### Encapsulation
-Encapsulation is the budling of data (attributes) and methods (functions) that operate on the data into a single unit or class. It restricts direct access to an object's components to prevent unintended consequences resulting from misuse of the methods and data. 
+Encapsulation is the bundling of data (attributes) and methods (functions) that operate on the data into a single unit or class. It restricts direct access to an object's components to prevent unintended consequences resulting from misuse of the methods and data. 
 
 Encapsulation helps to protect an object's internal state and expose a controlled interface for interacting with that object.
 
