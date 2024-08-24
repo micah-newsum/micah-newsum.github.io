@@ -1,37 +1,57 @@
-## Welcome to GitHub Pages
+## Welcome to my "All Things Software Engineering Reference Guide"
+### Contents
+- [Object-Oriented Design Principles](https://github.com/micah-newsum/micah-newsum.github.io.git)
+  - [Principle of Least Knowledge (Law of Demeter)](https://github.com/micah-newsum/micah-newsum.github.io.git)
+ 
+#### Object-Oriented Design Principles
+##### Principle of Least Knowledge (Law of Demeter)
+The "Principle of Least Knowledge," also known as the Law of Demeter, is a design principle that encourages reducing the dependencies between objects. It essentially states that a method of a class should only call methods on:
+- The object itself.
+- Objects passed in as arguments.
+- Objects it creates.
+- Direct components (e.g., field) of the object.
 
-You can use the [editor on GitHub](https://github.com/micah-newsum/micah-newsum.github.io/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
+Following this principle prevents us from creating designs that have a large number of classes coupled together so that changes in one part of the system cascade to other parts. Designs with lots of dependencies between many classes make for fragile systems that will be costly to maintain and complex to understand.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+##### Example
+Imagine you're creating an `Order` class that contains a collection of `OrderLine` objects. The goal is to interact with the collection in a way that does not expose the internal details of the `OrderLine` objects, or allow too much traversal through the object graph. This way, you limit the interactions with the collection to specific methods provided by the `Order` class.
+```typescript
+class Order {
+    private orderLines: OrderLine[] = [];
 
-### Markdown
+    // Add an order line
+    addOrderLine(orderLine: OrderLine): void {
+        this.orderLines.push(orderLine);
+    }
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+    // Remove an order line
+    removeOrderLine(orderLineId: string): void {
+        this.orderLines = this.orderLines.filter(line => line.id !== orderLineId);
+    }
 
-```markdown
-Syntax highlighted code block
+    // Get total price of all order lines
+    getTotalPrice(): number {
+        return this.orderLines.reduce((total, line) => total + line.getPrice(), 0);
+    }
 
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+    // Get total quantity of all order lines
+    getTotalQuantity(): number {
+        return this.orderLines.reduce((total, line) => total + line.getQuantity(), 0);
+    }
+}
 ```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/micah-newsum/micah-newsum.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+A common mistake is to expose the internal collection of `orderLines` directly to `Order` clients.
+```typescript
+// This is not recommended
+getOrderLines(): OrderLine[] {
+  return this.orderLines;
+}
+```
+Instead, a better approach is to provide methods that perform specific operations on the collection. For example, create methods on the `Order` class that handle the specific needs:
+```typescript
+// A better approach
+findOrderLineById(orderLineId: string): OrderLine | undefined {
+    return this.orderLines.find(line => line.id === orderLineId);
+}
+```
+This ensures that the internal details of the `OrderLine` objects are hidden and that the `Order` class maintains control over how data is accessed and modified.
