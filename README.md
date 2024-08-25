@@ -136,7 +136,8 @@ The "Principle of Least Knowledge," also known as the Law of Demeter, is a desig
 
 Following this principle prevents us from creating designs that have a large number of classes coupled together so that changes in one part of the system cascade to other parts. Designs with lots of dependencies between many classes make for fragile systems that will be costly to maintain and complex to understand.
 
-##### Example
+**Example**
+
 Imagine you're creating an `Order` class that contains a collection of `OrderLine` objects. The goal is to interact with the collection in a way that does not expose the internal details of the `OrderLine` objects, or allow too much traversal through the object graph. This way, you limit the interactions with the collection to specific methods provided by the `Order` class.
 ```typescript
 class Order {
@@ -178,3 +179,39 @@ findOrderLineById(orderLineId: string): OrderLine | undefined {
 }
 ```
 This ensures that the internal details of the `OrderLine` objects are hidden and that the `Order` class maintains control over how data is accessed and modified.
+
+**Tradeoffs**
+
+Following the Principle of Least Knowledge comes with tradeoffs. For example, imagine you have a `Car` class with an `Engine` component, which in turn has a `FuelTank` component, and you would like to provide a method that returns the fuel level of the `Car`.
+```Java
+public class Car {
+    private Engine engine;
+
+    public Car() {}
+
+    public int getFuelLevel() {
+        return engine.getFuelLevel();
+    }
+}
+
+public class Engine {
+    private FuelTank fuelTank;
+
+    public Engine() {}
+
+    public int getFuelLevel() {
+        return fuelTank.getFuelLevel();
+    }
+}
+
+public class FuelTank {
+    private int fuelLevel;
+
+    public FuelTank() {}
+
+    public int getFuelLevel() {
+        return fuelLevel;
+    }
+}
+```
+Abiding by this principle increases complexity because it's now less clear where the `fuelLevel` data is actually coming from. Additionally, it forces us to write more boilerplate code, which in this example is the repeated `getFuelLevel()` method in each class. Each method simply delegates calls to the next object in the chain without adding any functionality.
