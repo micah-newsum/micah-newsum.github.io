@@ -183,7 +183,7 @@ This ensures that the internal details of the `OrderLine` objects are hidden and
 **Tradeoffs**
 
 Following the Principle of Least Knowledge comes with tradeoffs. For example, imagine you have a `Car` class with an `Engine` component, which in turn has a `FuelTank` component, and you would like to provide a method that returns the fuel level of the `Car`.
-```Java
+```java
 public class Car {
     private Engine engine;
 
