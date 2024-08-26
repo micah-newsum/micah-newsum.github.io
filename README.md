@@ -1,26 +1,33 @@
 ## Software Engineering Reference Guide
 My curated reference guide for all things SWE.
 ### Contents
-- [The Four Pillars of Object-Oriented Programming](#the-four-pillars-of-object-oriented-programming)
-  - [Encapsulation](#encapsulation)
-  - [Inheritance](#inheritance)
-  - [Polymorphism](#polymorphism)
-  - [Abstraction](#abstraction)
-- [Design Patterns](#design-patterns)
-  - [Strategy Pattern](#strategy-pattern)
-  - [Adapter]
-  - [Facade]
-- [Object-Oriented Design Principles](#object-oriented-design-principles)
-  - [Principle of Least Knowledge](#principle-of-least-knowledge)
+- [Object-Oriented Programming](#object-oriented-programming)
+    - [The Four Pillars of Object-Oriented Programming](#the-four-pillars-of-object-oriented-programming)
+        - [Encapsulation](#encapsulation)
+        - [Inheritance](#inheritance)
+        - [Polymorphism](#polymorphism)
+        - [Abstraction](#abstraction)
+    - [Design Patterns](#design-patterns)
+        - [Strategy Pattern](#strategy-pattern)
+        - [Adapter]
+        - [Facade]
+    - [Object-Oriented Design Principles](#object-oriented-design-principles)
+        - [Principle of Least Knowledge](#principle-of-least-knowledge)
 - [System Design](#system-design)
   - [REST API](#rest-api)
 - [Testing](#testing)
   - [REST API Testing](#rest-api-testing)
-- [Software Project Management]
-  - [Software Architecture]
+- [Software Project Management](#software-project-management)
+  - TBA
+- [Soft Skills](#soft-skills)
+  - [Leadership](#leadership)
+  - [Being Lead](#being-lead)
+
+### Object-Oriented Programming
+Object-Oriented Programming (OOP) is a programming paradigm centered around the concept of "objects," which represent real-world entities, or abstract concepts.
 
 #### The Four Pillars of Object-Oriented Programming
-Object-Oriented Programming (OOP) is a programming paradigm centered around the concept of "objects," which represent real-world entities, or abstract concepts. The four pillars of OOP are encapsulation, inheritance, polymorphism, and abstraction. These pillars lay the foundation for creating modular, resuable, and maintainable code.
+The four pillars of OOP are encapsulation, inheritance, polymorphism, and abstraction. These pillars lay the foundation for creating modular, resuable, and maintainable code.
 #### Encapsulation
 Encapsulation is the bundling of data (attributes) and methods (functions) that operate on the data into a single unit or class. It restricts direct access to an object's components to prevent unintended consequences resulting from misuse of the methods and data. 
 
