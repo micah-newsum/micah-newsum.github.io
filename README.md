@@ -228,7 +228,7 @@ public class FuelTank {
 ```
 Abiding by this principle increases complexity because it's now less clear where the `fuelLevel` data is actually coming from. Additionally, it forces us to write more boilerplate code, which in this example is the repeated `getFuelLevel()` method in each class. Each method simply delegates calls to the next object in the chain without adding any functionality.
 ### Leadership
-As mentioned in the text, *Extreme Ownership: How U.S. Navy SEALs Lead and Win* there are no bad teams, only bad leaders.
+"There are no bad teams, only bad leaders." - *Extreme Ownership: How U.S. Navy SEALs Lead and Win* 
 #### Providing Feedback
  - Set up a private meeting, one-on-one, and ideally in-person.
  - Start with empathy and understanding.
