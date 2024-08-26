@@ -21,6 +21,7 @@ My curated reference guide for all things SWE.
   - TBA
 - [Soft Skills](#soft-skills)
   - [Leadership](#leadership)
+    - [Providing Feedback](#providing-feedback)
   - [Being Lead](#being-lead)
 
 ### Object-Oriented Programming
@@ -226,3 +227,35 @@ public class FuelTank {
 }
 ```
 Abiding by this principle increases complexity because it's now less clear where the `fuelLevel` data is actually coming from. Additionally, it forces us to write more boilerplate code, which in this example is the repeated `getFuelLevel()` method in each class. Each method simply delegates calls to the next object in the chain without adding any functionality.
+### Leadership
+As mentioned in the text, *Extreme Ownership: How U.S. Navy SEALs Lead and Win* there are no bad teams, only bad leaders.
+#### Providing Feedback
+ - Set up a private meeting, one-on-one, and ideally in-person.
+ - Start with empathy and understanding.
+    - Recognize their contributions and hard work.
+    - Express your intentions.
+        - Clarify the purpose of the feedback is to help them grown and improve, not to criticize or undermine them.
+        - Seek their perspective
+- Address the issue directly but kindly
+    - Describe what you've observed
+    - Ask open-ended questions
+        - Invite them to share their thoughts
+    - Listen actively
+- Provide constructive feedback
+    - Be specific
+        - Clearly articulate the areas where improvement is needed. 
+    - Relate to goals
+        - Tie your feedback to their personal and professional goals.
+    - Encourage a growth mindset
+- Collaborate on a Plan Forward
+    - Ask for their input
+    - Set clear expectations
+    - Offer support
+- Follow Up
+    - Check-In Regularaly
+    - Acknowledge Progress
+- Be Patient and Persistent
+    - Give them time
+    - Stay open
+- Consider the Bigger Picture
+    - Assess Team Dynamics
