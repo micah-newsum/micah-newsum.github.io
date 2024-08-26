@@ -9,8 +9,8 @@ My curated reference guide for all things SWE.
         - [Abstraction](#abstraction)
     - [Design Patterns](#design-patterns)
         - [Strategy Pattern](#strategy-pattern)
-        - [Adapter]
-        - [Facade]
+        - [Adapter](#adapter)
+        - [Facade](#facade)
     - [Object-Oriented Design Principles](#object-oriented-design-principles)
         - [Principle of Least Knowledge](#principle-of-least-knowledge)
 - [System Design](#system-design)
