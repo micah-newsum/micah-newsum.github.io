@@ -19,6 +19,10 @@ My curated reference guide for all things SWE.
   - [REST API Testing](#rest-api-testing)
 - [Software Project Management](#software-project-management)
   - TBA
+- [Cloud](#cloud)
+  - [AWS](#aws)
+  - [Terraform](#terraform)
+    - [Resource Drift](#resource-drift)
 - [Soft Skills](#soft-skills)
   - [Leadership](#leadership)
     - [Providing Feedback](#providing-feedback)
@@ -227,6 +231,11 @@ public class FuelTank {
 }
 ```
 Abiding by this principle increases complexity because it's now less clear where the `fuelLevel` data is actually coming from. Additionally, it forces us to write more boilerplate code, which in this example is the repeated `getFuelLevel()` method in each class. Each method simply delegates calls to the next object in the chain without adding any functionality.
+## Cloud
+### AWS
+### Terraform
+#### Resource Drift
+The Terraform state file contains all resources Terraform manages. Therefore, you should not make manual changes to resources controlled by Terraform; otherwise, the state file will become out of sync, or "drift," from the real infrastructure. 
 ## Soft Skills
 ### Leadership
 "There are no bad teams, only bad leaders." - *Extreme Ownership: How U.S. Navy SEALs Lead and Win* 
