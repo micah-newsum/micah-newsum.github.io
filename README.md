@@ -235,7 +235,10 @@ Abiding by this principle increases complexity because it's now less clear where
 ### AWS
 ### Terraform
 #### Resource Drift
-The Terraform state file contains all resources Terraform manages. Therefore, you should not make manual changes to resources controlled by Terraform; otherwise, the state file will become out of sync, or "drift," from the real infrastructure. 
+The Terraform state file contains all resources Terraform manages. Therefore, you should not make manual changes to resources controlled by Terraform; otherwise, the state file will become out of sync, or "drift," from the real infrastructure. If your state and configuration do not match your infrastructure, Terrafrom will attempt to reconcile your infrastructure, potentially leading to unintended changes.
+
+**References**
+- https://developer.hashicorp.com/terraform/tutorials/state/resource-drift
 ## Soft Skills
 ### Leadership
 "There are no bad teams, only bad leaders." - *Extreme Ownership: How U.S. Navy SEALs Lead and Win* 
