@@ -1,0 +1,7 @@
+- Why using correct HTTP status codes is important in REST APIs?
+- Using a single field to search for both top-level and nested resource in a REST API (e.g., milling job and milling item)
+- Why it's important to follow REST API best practices?
+- Why it's important to unit test your code?
+- Signs of dysfunction: Non-technical team members making technical decisions
+- Signs of dysfunction: Lack of technical governance over system design
+- Signs of dysfunction: Lack of bounded context in REST API design
