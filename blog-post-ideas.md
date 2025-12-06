@@ -7,3 +7,4 @@
 - Signs of dysfunction: Non-technical team members making technical decisions
 - Signs of dysfunction: Lack of technical governance over system design
 - Signs of dysfunction: Lack of bounded context in REST API design
+- Signs of dysfunction: Product Owners making UI/UX decisions (e.g., lack of SME)
