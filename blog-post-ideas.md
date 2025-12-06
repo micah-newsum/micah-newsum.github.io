@@ -1,6 +1,7 @@
 - Reusing fields for different purposes (i.e., data misuse, data overloading)
 - Why using correct HTTP status codes is important in REST APIs?
 - Using a single field to search for both top-level and nested resource in a REST API (e.g., milling job and milling item)
+- Storing a REST resource (e.g., Part) in a different API (e.g., Tag) but treating them the same.
 - Why it's important to follow REST API best practices?
 - Why it's important to unit test your code?
 - Signs of dysfunction: Non-technical team members making technical decisions
